@@ -10,3 +10,5 @@ docs/_build/
 build/
 dustmaps/data/
 frames/
+*.h5
+*.ipynb
