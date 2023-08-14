@@ -20,18 +20,15 @@ class Vergely2022Query(DustMap):
 
     def __init__(self, map_fname = None):
         if map_fname is None:
-            map_fname = '/Users/aidanmcbride/Documents/Code/dustmaps/dustmaps/vergely22_extinction_density_resol_010pc.h5'
+            map_fname = '/uufs/astro.utah.edu/common/home/u1371365/dustmaps_data/vergely2022/vergely22_extinction_density_resol_010pc.h5'
         
         with h5py.File(map_fname, 'r') as f:
             data = np.array(f['explore']['cube_datas'])
             self._data = data #np.swapaxes(data, 0, 1)
-            print('shape:', self._data.shape)
 
         
         self._xyz0 = (-1500, -1500, -400) # has resolution of 10pc
         self._shape = self._data.shape
-        print(self._shape)
-        # super(Vergely2022Query, self).__init__(coords)
 
 
     def _coords2idx(self, coords):
