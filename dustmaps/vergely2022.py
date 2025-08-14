@@ -14,8 +14,16 @@ from . import fetch_utils
 
 class Vergely2022Query(DustMap):
     """
-    The 3D dust map of Vergely et al. (2022), []. The
-    map covers 
+    The 3D dust map produced by Vergely et al. (2022). 
+
+    For details on how to use this map, see the original publication:
+    https://ui.adsabs.harvard.edu/abs/2022A%26A...664A.174V/abstract
+
+    We default to using the highest spatial resolution map. 
+
+    The data is deposited at Vizier: https://cdsarc.u-strasbg.fr/viz-bin/cat/J/A+A/664/A174
+
+
     """
 
     def __init__(self, map_fname = None):
